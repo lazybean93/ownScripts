@@ -1,0 +1,1 @@
+filezilla -a "$(pwd)"

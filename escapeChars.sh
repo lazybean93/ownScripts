@@ -1,0 +1,1 @@
+echo "$1" | sed 's/\//\\\//g' | sed "s/e[^a-z]s/e\\\'s/g" | sed "s/d[^a-z]s/d\\\'s/g" | sed "s/I[^a-z]m/I\\\'m/g" | sed "s/n[^a-z]+t/n\\\'t/g" | sed 's/\]/\\\]/g' | sed 's/\[/\\\[/g' | sed 's/\$/\\\$/g' | sed 's/,/\\,/g' | sed 's/\ /\\ /g' | sed 's/(/\\(/g' | sed 's/)/\\)/g' | sed 's/!/\\!/g' | sed 's/&/\\&/g' | sed "s/'/\\'/g" | sed 's/\.\//rm \.\//g'
