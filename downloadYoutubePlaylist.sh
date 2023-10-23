@@ -13,7 +13,7 @@ while [ -z "$PLAYLISTNAME" ]; do
 	sleep .1
 done;
 for i in $(ps -e | grep "$YOUTUBEDL" | grep -v grep | sed 's/ /\n/g' | grep -v '^$' | grep -v '[a-z]\|:' | sort -r); do
-	kill -9 $i &> /dev/null
+	kill -9 $i &> /dev/zero
 done
 echo $PLAYLISTNAME
 rm "$LOGALLURLS"
